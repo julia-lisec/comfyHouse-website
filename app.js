@@ -16,8 +16,9 @@ let cart = [];
 class Products {
     async getProducts () {
         try {
-            let result = await fetch('products.json')
-            return result;
+            let result = await fetch('products.json');
+            let data = await result.json();
+            return data;
         } catch (error) {
             console.log(error);
         }
