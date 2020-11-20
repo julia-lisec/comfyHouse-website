@@ -42,7 +42,7 @@ class UI {
             <!-- single product -->
             <article class="product">
                 <div class="img-container">
-                    <img src="${product.image}">
+                    <img class="product-img" src="${product.image}">
                     <button class="bag-btn" data-id=${product.id}>
                         <i class="fas fa-shopping-cart"></i>
                         add to bag
@@ -51,8 +51,9 @@ class UI {
                 <h3>${product.title}</h3>
                 <h4>$${product.price}</h4>
             </article>
-            `
-        })
+            `;
+        });
+        productsDOM.innerHTML = result;
     }
 }
 
