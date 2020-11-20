@@ -22,6 +22,7 @@ class Products {
             products = products.map (item => {
                 const {title, price} = item.fields;
                 const {id} = item.sys;
+                const image = item.field.image.fields.file.url;
             })
         } catch (error) {
             console.log(error);
