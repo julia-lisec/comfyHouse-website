@@ -60,7 +60,12 @@ class UI {
         const buttons = [...document.querySelectorAll(".bag-btn")];
         buttons.forEach(button => {
             let id = button.dataset.id;
-        })
+            let inCar = cart.find(item => item.id === id);
+            if (inCart) {
+                button.innerText = "In Cart";
+                button.disabled = true;
+            }
+        });
     }
 }
 
