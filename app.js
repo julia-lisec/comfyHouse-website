@@ -74,7 +74,7 @@ class UI {
                 event.target.diabled = true;
 
                 // get product from products
-            
+                let carItem = Storage.getProduct(id);
                 // add product to the cart
                 // save cart in local storage
                 // set cart values
