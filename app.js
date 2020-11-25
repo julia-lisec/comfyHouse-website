@@ -76,6 +76,7 @@ class UI {
                 // get product from products
                 let carItem = {...Storage.getProduct(id), amount: 1};
                 // add product to the cart
+                cart = [...cart, cartItem];
                 // save cart in local storage
                 // set cart values
                 // display cart item
