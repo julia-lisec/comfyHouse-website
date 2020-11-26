@@ -69,12 +69,12 @@ class UI {
                 button.disabled = true;
             }
             
-            button.addEventListener('click', (event)=> {
+            button.addEventListener('click', (event) => {
                 event.target.innerText = "In Cart";
                 event.target.diabled = true;
 
                 // get product from products
-                let carItem = {...Storage.getProduct(id), amount: 1};
+                let cartItem = {...Storage.getProduct(id), amount: 1};
                 // add product to the cart
                 cart = [...cart, cartItem];
                 // save cart in local storage
@@ -93,6 +93,9 @@ class UI {
             tempTotal += item.price * item.amount;
             itemsTotal += item.amount;
         });
+        cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+        cartItems.innerText = itemsTotal;
+        console.log(cartTotal, cartItems);
     }
 }
 
