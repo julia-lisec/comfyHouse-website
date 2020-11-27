@@ -113,7 +113,9 @@ class UI {
             <i class="fas fa-chevron-up" data-id=${item.id}></i>
             <p class="item-amount">${item.amount}</p>
             <i class="fas fa-chevron-down" data-id=${item.id}></i>
-        </div>`
+        </div>`;
+
+        cartContent.appendChild(div);
     }
 }
 
