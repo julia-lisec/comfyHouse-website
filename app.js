@@ -126,7 +126,12 @@ class UI {
 
     setupAPP() {
         cart = Storage.getCart();
-        
+        this.setCartValues(cart);
+        this.populateCart(cart);
+    }
+
+    populateCart(cart) {
+        cart.forEach(item => this.addCartItem(item));
     }
 }
 
